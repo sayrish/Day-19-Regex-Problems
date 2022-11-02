@@ -2,6 +2,8 @@ package com.regex.problem;
 
 
 
+
+
 import java.util.*;
 import java.util.regex.Pattern;
 
@@ -15,7 +17,7 @@ public class UserRegistration {
 		try (Scanner sc = new Scanner(System.in)) {
 			System.out.println("Enter First Name :");
 			String firstName = "^[A-Z]{1}[a-z]{2,}$";
-			String inputFirstName = sc.next(); // Kapil = true // kapil = false //
+			String inputFirstName = sc.next(); // sayrish1 = true // sayrish1 = false //
 			
 			System.out.println("Enter Last Name :");
 			String lastName = "^[A-Z]{1}[a-z]{2,}$";
@@ -29,14 +31,21 @@ public class UserRegistration {
 			String mobileNumber ="^(91)()[6-9]{1}[0-9]{9}$";
 			String inputmobileNumber = sc.next();
 			
+			System.out.println("Enter Password");
+			String password = "[A-Za-z0-9]{8}$";
+			String inputPassword = sc.next(); 
+			
 			UserRegistration ur = new UserRegistration();
 			System.out.println(ur.userName(firstName, inputFirstName));
 			System.out.println(ur.userName(lastName, inputLastName));
 			System.out.println(ur.userName(emailId, inputEmailId)); //abc.xyz@bl.co.in
 			System.out.println(ur.userName(mobileNumber, inputmobileNumber));
+			System.out.println(ur.userName(password, inputPassword));
 		}
 
 	}
+
+
 
 
 
